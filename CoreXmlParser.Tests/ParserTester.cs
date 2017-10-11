@@ -1,15 +1,15 @@
 using System;
 using Xunit;
-using CoreXamlParser;
+using CoreXmlParser;
 
-namespace CoreXamlParser.Tests
+namespace CoreXmlParser.Tests
 {
     public class ParserTester
     {
         [Fact]
         public void ParserIsNotNull()
         {
-            var parser = new CoreXmlParser.CoreXmlParser();
+            var parser = new CoreXmlParser();
 
             Assert.NotNull(parser);
         }
@@ -19,7 +19,7 @@ namespace CoreXamlParser.Tests
         {
             string xml = "<xml><\\xml>";
 
-            var parser = new CoreXmlParser.CoreXmlParser(xml);
+            var parser = new CoreXmlParser(xml);
 
             Assert.NotNull(parser);
         }
@@ -29,7 +29,7 @@ namespace CoreXamlParser.Tests
         public void ParserReturnsString()
         {
             string xml = "<xml><\\xml>";
-            var parser = new CoreXmlParser.CoreXmlParser(xml);
+            var parser = new CoreXmlParser(xml);
             
             var expected = parser.ContentToParse; 
 
