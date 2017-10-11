@@ -6,7 +6,7 @@ namespace CoreXmlParser
     {
         public readonly string _content;
 
-        public string ContentToParse { get { return this._content; } }
+        public string ContentToParse => this._content;
         public CoreXmlParser()
         {
             
